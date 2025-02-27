@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  linkedin-jobs-api:
+    build: .
+    container_name: linkedin-jobs-api
+    ports:
+      - "3000:3000" # Map port 3000 of the host to port 3000 of the container
+    volumes:
+      - .:/app
+    restart: unless-stopped
